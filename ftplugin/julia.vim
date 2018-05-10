@@ -3323,7 +3323,7 @@ function s:LaTeXtoUTF8()
 
 	" convert latex commands to unicode
     for key in keys(s:mapping)
-        silent! execute '%s/\'.key.'/'.s:mapping[key].'/eg'
+        silent! execute '%s/\'.key.'/'.s:mapping[key].'/eIg'
     endfor
 
 	call cursor(s:line,s:column)
